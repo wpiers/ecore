@@ -1,5 +1,6 @@
 language: java
-script: cd clouddesigner/org.occiware.clouddesigner.parent && mvn clean verify 
+script:
+ - cd clouddesigner/org.occiware.clouddesigner.parent && mvn clean verify 
  - curl -T bintray.png -uwpiers:$KEY https://api.bintray.com/content/wpiers/generic/CloudDesigner/$TRAVIS_JOB_NUMBER/bintray.png
  - curl -XPOST -uwpiers:$KEY https://api.bintray.com/content/wpiers/generic/CloudDesigner/$TRAVIS_JOB_NUMBER/publish
  - curl -XGET https://bintray.com/wpiers/generic/CloudDesigner/$TRAVIS_JOB_NUMBER
