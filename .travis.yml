@@ -1,2 +1,2 @@
 language: java
-script: cd clouddesigner/org.occiware.clouddesigner.parent && mvn clean verify
+script: cd clouddesigner/org.occiware.clouddesigner.parent && mvn clean verify 
