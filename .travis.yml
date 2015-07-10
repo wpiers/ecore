@@ -1,4 +1,4 @@
-language: java 
+language: java
 script:
 # build clouddesigner
 - cd clouddesigner/org.occiware.clouddesigner.parent
