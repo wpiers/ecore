@@ -6,7 +6,7 @@ do curl -uwpiers:$KEY -X DELETE https://api.bintray.com/content/wpiers/generic/$
 done
 
 # copy new artifacts
-cd ../org.occiware.clouddesigner.product/target/products
+cd clouddesigner/org.occiware.clouddesigner.product/target/products
 curl -T org.occiware.clouddesigner.product-linux.gtk.x86_64.zip -uwpiers:$KEY https://api.bintray.com/content/wpiers/generic/CloudDesigner/$VERSION/CloudDesigner.$VERSION.N$TRAVIS_BUILD_NUMBER.linux.gtk.x86_64.zip
 curl -T org.occiware.clouddesigner.product-macosx.cocoa.x86_64.zip -uwpiers:$KEY https://api.bintray.com/content/wpiers/generic/CloudDesigner/$VERSION/CloudDesigner.$VERSION.N$TRAVIS_BUILD_NUMBER.macosx.cocoa.x86_64.zip
 curl -T org.occiware.clouddesigner.product-win32.win32.x86.zip -uwpiers:$KEY https://api.bintray.com/content/wpiers/generic/CloudDesigner/$VERSION/CloudDesigner.$VERSION.N$TRAVIS_BUILD_NUMBER.win32.x86.zip
