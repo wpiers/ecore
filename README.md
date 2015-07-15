@@ -1,5 +1,3 @@
-test
-
 OCCI ecore
 ==========
 
