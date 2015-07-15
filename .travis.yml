@@ -8,4 +8,4 @@ script:
 - cd clouddesigner/org.occiware.clouddesigner.parent && mvn clean verify
 
 after_script:
-- chmod a+x promote.sh && ./promote.sh
+- cd ../.. && chmod a+x promote.sh && ./promote.sh
