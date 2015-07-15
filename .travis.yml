@@ -11,5 +11,4 @@ script:
 after_script:
 - cd ../.. 
 - chmod a+x promote.sh 
-- ls
 - ./promote.sh
