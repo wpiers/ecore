@@ -11,15 +11,13 @@ script:
 - mvn clean verify
 
 # clear last nightly
-- curl -uwpiers:key -X DELETE $BINTRAY_PACKAGE/CloudDesigner.$VERSION.linux.gtk.x86_64.zip
-- curl -uwpiers:key -X DELETE $BINTRAY_PACKAGE/CloudDesigner.$VERSION.macosx.cocoa.x86_64.zip
-- curl -uwpiers:key -X DELETE $BINTRAY_PACKAGE/CloudDesigner.$VERSION.win32.x86.zip
+- curl -uwpiers:key -X DELETE $BINTRAY_PACKAGE/CloudDesigner.$VERSION.N*
 
 # copy new artifacts
 - cd ../org.occiware.clouddesigner.product/target/products
-- curl -T org.occiware.clouddesigner.product-linux.gtk.x86_64.zip -uwpiers:$KEY $BINTRAY_PACKAGE/$VERSION/CloudDesigner.$VERSION.linux.gtk.x86_64.zip
-- curl -T org.occiware.clouddesigner.product-macosx.cocoa.x86_64.zip -uwpiers:$KEY $BINTRAY_PACKAGE/$VERSION/CloudDesigner.$VERSION.macosx.cocoa.x86_64.zip
-- curl -T org.occiware.clouddesigner.product-win32.win32.x86.zip -uwpiers:$KEY $BINTRAY_PACKAGE/$VERSION/CloudDesigner.$VERSION.win32.x86.zip
+- curl -T org.occiware.clouddesigner.product-linux.gtk.x86_64.zip -uwpiers:$KEY $BINTRAY_PACKAGE/$VERSION/CloudDesigner.$VERSION.N$TRAVIS_BUILD_NUMBER.linux.gtk.x86_64.zip
+- curl -T org.occiware.clouddesigner.product-macosx.cocoa.x86_64.zip -uwpiers:$KEY $BINTRAY_PACKAGE/$VERSION/CloudDesigner.$VERSION.N$TRAVIS_BUILD_NUMBER.macosx.cocoa.x86_64.zip
+- curl -T org.occiware.clouddesigner.product-win32.win32.x86.zip -uwpiers:$KEY $BINTRAY_PACKAGE/$VERSION/CloudDesigner.$VERSION.N$TRAVIS_BUILD_NUMBER.win32.x86.zip
 
 # publish nightly
 - curl -XPOST -uwpiers:$KEY $BINTRAY_PACKAGE/$VERSION/publish
