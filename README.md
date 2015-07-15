@@ -1,5 +1,3 @@
-test branch
-
 OCCI ecore
 ==========
 
