@@ -5,7 +5,11 @@ env:
 language: java
 
 script:
-- cd clouddesigner/org.occiware.clouddesigner.parent && mvn clean verify
+- cd clouddesigner/org.occiware.clouddesigner.parent 
+- mvn clean verify
 
 after_script:
-- cd ../.. && chmod a+x promote.sh && ./promote.sh
+- cd ../.. 
+- chmod a+x promote.sh 
+- ls
+- ./promote.sh
