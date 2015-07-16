@@ -40,5 +40,5 @@ for file in $PLUGINS;
 do curl -T $file -u$BINTRAY_USER:$KEY $VERSION_DIR/$file
 done
 
-# publish nightly
+# publish nightly 
 curl -XPOST -u$BINTRAY_USER:$KEY $VERSION_DIR/publish
