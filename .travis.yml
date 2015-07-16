@@ -10,6 +10,7 @@ script:
 
 after_script:
 - cd ../.. 
-- chmod +x travis-promote.sh 
+- chmod +x promoteProducts.sh 
 - ./promoteProducts.sh
+- chmod +x promoteUpdateSite.sh 
 - ./promoteUpdateSite.sh
