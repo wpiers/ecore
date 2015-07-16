@@ -1,3 +1,4 @@
+PRODUCT=CloudDesigner
 VERSION=0.1.0
 BINTRAY_USER=wpiers
 BINTRAY_R=https://dl.bintray.com/$BINTRAY_USER/generic
