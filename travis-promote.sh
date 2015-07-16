@@ -1,5 +1,4 @@
 BINTRAY_USER=wpiers
-
 BINTRAY_R=https://dl.bintray.com/$BINTRAY_USER/generic
 BINTRAY_W=https://api.bintray.com/content/$BINTRAY_USER/generic
 
