@@ -1,4 +1,4 @@
-OCCI ecore
+OCCI ecore 
 ==========
 
 # Description
